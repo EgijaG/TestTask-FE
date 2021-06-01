@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 $backgrnd-clr: #f2f2f2;
 $main-text-clr: #1a222e;
 $accent-clr: #ffc600;
 $headings-font: "Poppins", sans-serif;
+$subheader-clr: #e5e5e5;
+
 body {
   font-family: $headings-font;
   font-style: normal;
@@ -20,6 +22,7 @@ body {
   font-weight: 600;
   width: 15%;
   min-width: 60px;
+  margin-top: 50px;
 }
 .button {
   margin: 30px;
@@ -60,21 +63,32 @@ body {
   display: block;
   margin: auto;
 }
-.disabledButton {
-  background-color: #d8d8d8;
-  cursor: not-allowed;
+.container > hr {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.form-check {
+  text-align: left;
+}
 h1 {
   font-family: $headings-font;
-  font-weight: 600;
-  margin-top: 40px;
+  font-weight: 700;
+  margin-top: 60px;
+  margin-bottom: 40px;
   color: $main-text-clr;
 }
 
 h3 {
   font-size: 16px;
   text-align: center;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: right;
 }
 
 /* img {
@@ -87,20 +101,22 @@ h3 {
     box-shadow: 2px 15px -12px rgba(0, 0, 0, 0.57);
   } */
 
-input {
-  width: 100%;
-  height: 40px;
-  margin-bottom: 20px;
+.info {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
 }
 
-label {
-  font-size: 20px;
-  margin-bottom: 5px;
+// input[type="radio"] {
+//   width: 18px;
+//   height: 18px;
+// }
+
+input[type="radio"]:checked {
+  background-color: $accent-clr;
+  border-color: $accent-clr;
 }
 
-li {
-  font-size: 18px;
-}
 #logo {
   height: 50px;
   padding: 10px;
@@ -109,22 +125,17 @@ li {
   background: $main-text-clr;
   position: relative;
   width: 100%;
-  margin-bottom: 25px;
 }
 .navbar-brand {
   display: block;
   margin: auto;
 }
 
-.out-of-stock-img {
-  opacity: 0.5;
-}
-
 p {
   font-size: 22px;
 }
 .progress {
-  width: 100%;
+  width: 90%;
   height: 6px;
   background: #e1e4e8;
   border-radius: 3px;
@@ -135,13 +146,13 @@ p {
   height: 100%;
   background: linear-gradient(
     90deg,
-    #ffd33d,
-    #ea4aaa 17%,
-    #b34bff 34%,
-    #01feff 51%,
-    #ffd33d 68%,
-    #ea4aaa 85%,
-    #b34bff
+    $accent-clr,
+    #f9530b 17%,
+    #fdf542 34%,
+    #f9530b 51%,
+    #fdf542 68%,
+    #f9530b 85%,
+    $accent-clr
   );
   background-size: 300% 100%;
   animation: progress-animation 2s linear infinite;
@@ -154,7 +165,11 @@ select {
   cursor: pointer;
 }
 .subheader {
-  background: grey, 100%;
+  background-color: $subheader-clr;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 50px;
 }
 textarea {
   width: 95%;
