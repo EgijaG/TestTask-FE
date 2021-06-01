@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giraffe360 Preferences</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="navbar-brand">
+                <img src="images/yellow-logo.png" alt="Giraffe360 logo" id="logo">
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="info" id="start">
+                <h1>Welcome to your <span style="color:#ffc600">Giraffe360</span> account.</h1>
+                <h3>Set up your project settings.</h3>
+                <h3>This will take just a few minutes.</h3>
+                <button type="button" class="btn btn-warning"
+                    onClick="replaceContentInContainer('branding')">Start</button>
+
+            </div>
+
+            <div id="branding" style="display:none">
+                <div class="subheader">
+                    <div class="progress">
+                        <span class="progress-bar" style="width: 25%"></span>
+                    </div>
+                </div>
+                <h1>Branding</h1>
+                <button type="button" class="btn btn-warning"
+                    onClick="replaceContentInContainer('photos')">Next</button>
+
+            </div>
+            <div id="photos" style="display:none">
+                <div class="subheader">
+                    <div class="progress">
+                        <span class="progress-bar" style="width: 50%"></span>
+                    </div>
+                </div>
+                <h1>Photos</h1>
+                <button type="button" class="btn btn-outline-warning back-btn"
+                    onClick="replaceContentInContainer('branding')">Back</button>
+                <button type="button" class="btn btn-warning"
+                    onClick="replaceContentInContainer('floorplans')">Next</button>
+
+            </div>
+            <div id="floorplans" style="display:none">
+                <div class="subheader">
+                    <div class="progress">
+                        <span class="progress-bar" style="width: 75%"></span>
+                    </div>
+                </div>
+                <h1>Floorplans</h1>
+                <button type="button" class="btn btn-outline-warning back-btn"
+                    onClick="replaceContentInContainer('photos')">Back</button>
+                <button type="button" class="btn btn-warning" onClick="replaceContentInContainer('tour')">Next</button>
+
+            </div>
+            <div id="tour" style="display:none">
+                <div class="subheader">
+                    <div class="progress">
+                        <span class="progress-bar" style="width: 99%"></span>
+                    </div>
+                </div>
+                <h1>Tour</h1>
+                <button type="button" class="btn btn-outline-warning back-btn"
+                    onClick="replaceContentInContainer('floorplans')">Back</button>
+                <button type="button" class="btn btn-warning" onClick="replaceContentInContainer('end')">Next</button>
+
+            </div>
+            <div id="end" style="display:none">
+                <h1>Thanks</h1>
+                <button type="button" class="btn btn-outline-warning back-btn"
+                    onClick="replaceContentInContainer('tour')">Back</button>
+                <a href="#dashboard">
+                    <button type="button" class="btn btn-warning">Go to dashboard</button>
+                </a>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script src="app.js"></script>
+
+</html>
