@@ -21,84 +21,76 @@
             </a>
         </nav>
     </header>
-    <!-- Start of the main content -->
+    <!-- First page -->
     <main id="start">
         <div class="container">
-            <span class="info">
+            <span class="info" id="info">
                 <h1>Welcome to your <span style="color:#ffc600">Giraffe360</span> account.</h1>
                 <h3>Set up your project settings.</h3>
                 <h3>This will take just a few minutes.</h3>
                 <button type="button" class="btn btn-warning"
-                    onClick="counter++,replaceContentInContainer('start','branding'), replaceFirst()">Start</button>
+                    onClick="counter++,replaceContentInContainer('start','branding'), replaceOptions()">Start</button>
             </span>
         </div>
     </main>
 
-    <!-- HTML replacement 1 -->
+    <!-- Preference page template(changes made by JS) -->
     <div id="branding" style="display:none">
-        <!-- Subheader with progress bar -->
+        <!-- Subheader with animated progress bar -->
         <div class="subheader">
             <div class="progress">
                 <span class="progress-bar" style="width: 25%"></span>
             </div>
             <h1>Set your <span class="subhead-title"></span> preferences</h1>
         </div>
+
         <!-- Main content(preference options) container -->
         <div class="container">
             <div class="row  justify-content-center">
                 <div class="col-3 left">
                     <h4 id="firstRow"></h4>
                 </div>
-                <div class="col-3 right">
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round">
-                            <span class="on">ON</span>
-                            <span class="off">OFF</span>
-                        </span>
-                    </label>
-                </div>
+                <div class="col-3 right"></div>
             </div>
+
+
+            <!-- Separating line between content in preference page -->
             <div class="line"></div>
             <div class="row  justify-content-center">
                 <div class="col-3 left">
                     <h4 id='scndRow'></h4>
                 </div>
-                <div class="col-3 right">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="options" id="optionOne" value="option1">
-                        <label class="form-check-label" for="optionOne">
-                            Top left
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="options" id="optionTwo" value="option1">
-                        <label class="form-check-label" for="optionTwo">
-                            Centre
-                        </label>
-                    </div>
-                </div>
+                <div class="col-3 right extra"></div>
             </div>
             <div class="line"></div>
-
             <button type="button" class="btn btn-outline-warning back-btn"
-                onClick="counter--, replaceFirst()">Back</button>
-            <button type="button" class="btn btn-warning next-btn" onClick="counter++, replaceFirst()">Next</button>
+                onClick="counter--, replaceOptions()">Back</button>
+            <button type="button" class="btn btn-warning next-btn" onClick="counter++, replaceOptions()">Next</button>
         </div>
     </div>
+    
 
+    <!-- Last page display -->
     <div id="finished" style="display:none">
-        <div class="container">
+        <div class="container info">
             <h1>Congratulations!</h1>
-            <h1>Your preferences are set.</h1>
-            <button type="button" class="btn btn-warning"><a href="#"></a>Go to dashboard</button>
+            <h1 id="last-sentence">Your preferences are set.</h1>
+            <button type="button" class="btn btn-warning" id="dashboard-btn"><a href="#"></a>Go to dashboard</button>
         </div>
     </div>
-
-
-
 
 </body>
+<!-- Switch template -->
+<template class="switch">
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider round">
+            <span class="on">ON</span>
+            <span class="off">OFF</span>
+        </span>
+    </label>
+</template>
+
 <script src="app.js"></script>
 
 </html>
