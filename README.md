@@ -3,5 +3,5 @@
 
 In order to see the webpage:
 1) Copy path of index.html
-2) Paste into browser search bar
+2) Paste into browser address bar
 
