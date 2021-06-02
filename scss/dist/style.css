@@ -1,34 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-$backgrnd-clr: #f2f2f2;
-$main-text-clr: #1a222e;
-$accent-clr: #ffc600;
-$main-font: "Poppins", sans-serif;
-$subheader-clr: #e5e5e5;
-
 body {
-  font-family: $main-font;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
-  background-color: $backgrnd-clr;
+  background-color: #f2f2f2;
   margin: 0px;
-  color: $main-text-clr;
+  color: #1a222e;
   height: 100vh;
 }
+
 .back-btn {
   background-color: none;
   color: black;
-  margin-right: 10px;
 }
+
 .btn {
   font-weight: 600;
   width: 15%;
   min-width: 60px;
   margin-top: 50px;
 }
-.next-btn {
-  margin-left: 10px;
-}
+
 .button {
   margin: 30px;
   background-color: #39495c;
@@ -38,9 +30,7 @@ body {
   height: 60px;
   color: white;
   padding: 20px;
-  box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17),
-    inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15),
-    inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
   text-align: center;
   cursor: pointer;
 }
@@ -63,27 +53,29 @@ body {
   border: 2px solid #d8d8d8;
   border-radius: 50%;
 }
+
 .container {
   text-align: center;
   display: block;
   margin: auto;
 }
+
 .container > hr {
   width: 30%;
   margin-left: auto;
   margin-right: auto;
 }
 
-#firstRow,
-#scndRow {
+.form-check {
   text-align: left;
 }
+
 h1 {
-  font-family: $main-font;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  margin-top: 40px;
-  margin-bottom: 10px;
-  color: $main-text-clr;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: #1a222e;
 }
 
 h3 {
@@ -94,7 +86,7 @@ h3 {
 h4 {
   font-weight: 600;
   font-size: 18px;
-  text-align: center;
+  text-align: right;
 }
 
 /* img {
@@ -106,36 +98,28 @@ h4 {
     -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
     box-shadow: 2px 15px -12px rgba(0, 0, 0, 0.57);
   } */
-
 .info {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
 }
 
-// input[type="radio"] {
-//   width: 18px;
-//   height: 18px;
-// }
+input[type=radio]:checked {
+  background-color: #ffc600;
+  border-color: #ffc600;
+}
 
-input[type="radio"]:checked {
-  background-color: $accent-clr;
-  border-color: $accent-clr;
-}
-.line {
-  border-bottom: 2px solid $subheader-clr;
-  margin-left: 25%;
-  margin-right: 25%;
-}
 #logo {
   height: 50px;
   padding: 10px;
 }
+
 .navbar {
-  background: $main-text-clr;
+  background: #1a222e;
   position: relative;
   width: 100%;
 }
+
 .navbar-brand {
   display: block;
   margin: auto;
@@ -144,57 +128,44 @@ input[type="radio"]:checked {
 p {
   font-size: 22px;
 }
+
 .progress {
   width: 90%;
   height: 6px;
   background: #e1e4e8;
   border-radius: 3px;
   overflow: hidden;
-  margin: auto;
 }
+
 .progress-bar {
   display: block;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    $accent-clr,
-    #f9530b 17%,
-    #fdf542 34%,
-    #f9530b 51%,
-    #fdf542 68%,
-    #f9530b 85%,
-    $accent-clr
-  );
+  background: linear-gradient(90deg, #ffc600, #f9530b 17%, #fdf542 34%, #f9530b 51%, #fdf542 68%, #f9530b 85%, #ffc600);
   background-size: 300% 100%;
   animation: progress-animation 2s linear infinite;
 }
 
-// Column alignment
-.right {
-  text-align: justify;
-}
-.row {
-  padding: 20px;
-}
-.select {
+select {
   height: 40px;
   font-size: 20px;
   background-color: white;
   cursor: pointer;
 }
+
 .subheader {
-  background-color: $subheader-clr;
+  background-color: #e5e5e5;
   text-align: center;
   padding-top: 40px;
   padding-bottom: 40px;
   margin-bottom: 50px;
 }
+
 /* The switch - the box around the slider */
 .switch {
-  position: absolute;
+  position: relative;
   display: inline-block;
-  width: 70px;
-  height: 28px;
+  width: 60px;
+  height: 34px;
 }
 
 /* Hide default HTML checkbox */
@@ -220,8 +191,8 @@ p {
 .slider:before {
   position: absolute;
   content: "";
-  height: 20px;
-  width: 20px;
+  height: 26px;
+  width: 26px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -230,39 +201,17 @@ p {
 }
 
 input:checked + .slider {
-  background-color: $accent-clr;
+  background-color: #2196f3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px $accent-clr;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(42px);
-  -ms-transform: translateX(42px);
-  transform: translateX(42px);
-}
-.on {
-  display: none;
-}
-
-.on,
-.off {
-  color: white;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  font-size: 10px;
-  font-family: $main-font;
-}
-
-input:checked + .slider .on {
-  display: block;
-}
-
-input:checked + .slider .off {
-  display: none;
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 /* Rounded sliders */
@@ -274,22 +223,31 @@ input:checked + .slider .off {
   border-radius: 50%;
 }
 
-@media only screen and (min-width: 1008px) {
-  .container {
-    width: 1120px;
-  }
+textarea {
+  width: 95%;
+  height: 70px;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
-@media only screen and (max-width: 1007px) {
-  .container {
-    margin-right: 24px;
-    margin-left: 24px;
-  }
+
+ul {
+  list-style-type: none;
 }
+
 @media only screen and (max-width: 600px) {
   .container {
     flex-direction: column;
-    margin-right: 12px;
-    margin-left: 12px;
+  }
+
+  .product-image,
+.product-info {
+    margin-left: 10px;
+    width: 100%;
+  }
+
+  .review-form {
+    width: 90%;
   }
 }
 @keyframes progress-animation {
