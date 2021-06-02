@@ -54,14 +54,7 @@ const contents = [
     progress: '99%',
     name: 'tour',
     firstRow: 'Welcome screen',
-    scndRow:
-      'Welcome screen logo' +
-      `<div class="con-tooltip top">
-          <p>i</p>
-        <div class="tooltip">
-          <p>Can be enabled only if the “Welcome screen” is enabled</p>
-        </div>
-      </div>`,
+    scndRow: 'Welcome screen logo',
     extra: document.querySelector('.switch').innerHTML
   }
 ]
